@@ -1,0 +1,63 @@
+-- Criação do banco de dados chatphp
+CREATE DATABASE chatphp;
+
+-- Usar o banco de dados chatphp
+USE chatphp;
+
+-- Criação da tabela adduser
+CREATE TABLE adduser (
+    id INT PRIMARY KEY,
+    user VARCHAR(15),
+    addeduser VARCHAR(15)
+);
+
+-- Criação da tabela deletemsg
+CREATE TABLE deletemsg (
+    id INT PRIMARY KEY,
+    user INT,
+    addeduser VARCHAR(15)
+);
+
+-- Criação da tabela editmsg
+CREATE TABLE editmsg (
+    id INT PRIMARY KEY,
+    id_edited INT,
+    newmessage VARCHAR(200),
+    newhour TIMESTAMP
+);
+
+-- Criação da tabela messages
+CREATE TABLE messages (
+    id INT PRIMARY KEY,
+    msgfrom VARCHAR(15),
+    msgto VARCHAR(15),
+    message VARCHAR(200),
+    hour TIMESTAMP
+);
+
+-- Criação da tabela reply
+CREATE TABLE reply (
+    id INT PRIMARY KEY,
+    id_replying INT,
+    sender VARCHAR(15),
+    receiver VARCHAR(15),
+    message VARCHAR(200),
+    hour TIMESTAMP
+);
+
+-- Criação da tabela users
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    email VARCHAR(200),
+    user VARCHAR(15),
+    password VARCHAR(32),
+    profilepic VARCHAR(200),
+    hour TIMESTAMP
+);
+
+-- Criação da tabela viewed
+CREATE TABLE viwed (
+    id INT PRIMARY KEY,
+    id_message INT,
+    viwed_hour TIMESTAMP
+);
