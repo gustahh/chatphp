@@ -1,0 +1,1 @@
+Para criar o banco de dados, vá até bd/bd.txt e execute os comandos no seu banco de dados.
